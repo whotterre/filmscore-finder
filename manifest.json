@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Music Movie Recommender",
+    "version": "1.0",
+    "description": "A Chrome extension to give you movie recommendations from movie soundtracks you listened to",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Get Recommendations"
+    },
+    "icons": {
+      "512": "icons/icon.jpg"
+    }
+  }
