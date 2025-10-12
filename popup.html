@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wikipedia Summarizer</title>
-    <style>
-      body { font-family: Arial, sans-serif; padding: 10px; }
-      input { width: 100%; padding: 5px; margin-bottom: 10px; }
-      button { width: 100%; padding: 5px; }
-    </style>
-  </head>
-  <body>
-  <h2>YouTube Music Movie Recs</h2>
-  <p class="message"></p>
-  <div id="results"></div>
-    <script src="popup.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube Music Movie Recs</title>
+  <link rel="stylesheet" href="./style.css">
+  </link>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="logo.jpg" alt="logo" />
+      <div>
+        <h1>YouTube Music Movie Recs</h1>
+        <p class="subtitle">Detect soundtrack tracks and suggest movies <span id="badge"
+            style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:999px;margin-left:8px;font-size:12px;display:none">0</span>
+        </p>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button id="refreshBtn" class="action">Find titles</button>
+      <button id="closeBtn" class="ghost">Close</button>
+    </div>
+
+    <p class="message"></p>
+    <div id="spinnerWrap" style="margin-top:6px"></div>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
 </html>
