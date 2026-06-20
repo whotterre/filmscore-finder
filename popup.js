@@ -70,7 +70,7 @@ function renderTitles(titles) {
     badgeEl.style.display = movies.length ? 'inline-block' : 'none';
     badgeEl.textContent = movies.length;
 
-    const OMDB_KEY = '67f8031e'; // <<--- replace with your own key if needed
+    const OMDB_KEY = '67f8031e'; 
     const cache = {};
 
     async function fetchOmdb(q) {
@@ -87,7 +87,6 @@ function renderTitles(titles) {
         }
     }
 
-    // show placeholder cards while loading
     movies.forEach((m, i) => {
         const card = document.createElement('div'); card.className = 'card'; card.style.animationDelay = `${i * 30}ms`;
         card.innerHTML = `<div style="display:flex;gap:10px;align-items:center"><div style="width:60px;height:80px;background:var(--glass);border-radius:6px"></div><div style="flex:1"><div class="title">${m}</div><div class="meta">Loading info...</div></div></div>`;
